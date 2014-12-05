@@ -19,6 +19,3 @@ end
 %w(betty barney bamm-bamm).each do |name|
   users[name.to_sym] = User.create!(email: "no-reply+#{name}@betterment.com", full_name: "#{name.titleize} Rubble", avatar: headshot_file(name))
 end
-
-if defined? Comment
-end
