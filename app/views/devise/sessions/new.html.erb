@@ -3,7 +3,7 @@
     <div class="login-panel">
       <a href="<%= root_path %>" class="logo"></a>
       <p>Log in to start rocking.</p>
-      <%= link_to "Log in with Google", user_omniauth_authorize_path(:google_oauth2), class:"button login-button" %>
+      <%= link_to "Log in with Google", user_google_oauth2_omniauth_authorize_path, class:"button login-button" %>
     </div>
   </div>
 </section>
