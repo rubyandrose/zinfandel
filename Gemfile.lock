@@ -173,6 +173,9 @@ GEM
       sprockets (> 2.11)
       sprockets-rails
       tilt
+    simple_form (3.4.0)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     spring (2.0.1)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -216,6 +219,7 @@ DEPENDENCIES
   rails (~> 5.0.0)
   rspec-rails
   sassc-rails
+  simple_form
   spring
   sqlite3
   therubyracer

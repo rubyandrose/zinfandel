@@ -12,6 +12,7 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'paperclip'
 gem 'puma'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'
