@@ -1,0 +1,7 @@
+{
+  "name": "Ruby and Rose Training App",
+  "description": "This app is for teaching people Ruby",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}
