@@ -1,7 +1,7 @@
-# ${Wine Style}
+# Zinfandel
 
-the social network for wine enthusiasts.
+The social network for wine enthusiasts.
 
-${Quip about the wine style.}
+Just like revenge, you’ll want to serve it ice cold and perhaps with Thai food.
 
-[Pour yourself a glass](https://ruby-rose-${wine-style}.herokuapp.com/)
+[Pour yourself a glass](https://ruby-rose-zinfandel.herokuapp.com/)
