@@ -1,7 +1,7 @@
-# Wine Style
+# ${Wine Style}
 
 the social network for wine enthusiasts.
 
-Quip about the wine style.
+${Quip about the wine style.}
 
-[link to heroku app](link to heroku app)
+[Pour yourself a glass](https://ruby-rose-${wine-style}.herokuapp.com/)
