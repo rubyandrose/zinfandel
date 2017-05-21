@@ -112,6 +112,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.20.0)
     puma (3.7.1)
     rack (2.0.2)
     rack-test (0.6.3)
@@ -215,6 +216,7 @@ DEPENDENCIES
   jquery-rails (~> 4.0)
   omniauth-google-oauth2
   paperclip
+  pg
   puma
   rails (~> 5.0.0)
   rspec-rails
