@@ -1,9 +1,10 @@
 <section>
-  <div class="wrapper">
-    <div class="login-panel">
-      <a href="<%= root_path %>" class="logo"></a>
-      <p>Log in to start rocking.</p>
-      <%= link_to "Log in with Google", user_google_oauth2_omniauth_authorize_path, class:"button login-button" %>
-    </div>
-  </div>
+  <center>
+    <a href="<%= root_path %>"></a>
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", height: "120" %>
+    <% end %>
+    <p>Log in to get the juices flowing.</p>
+    <%= link_to "Log in with Google", user_google_oauth2_omniauth_authorize_path %>
+  </center>
 </section>
