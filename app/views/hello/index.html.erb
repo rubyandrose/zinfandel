@@ -1,2 +1,12 @@
 <h1>Hello, <%= @user_name %></h1>
 <img src="<%= @picture %>">
+<%= form_tag("/post", method: "post") do %>
+  <%= label_tag(:content, "Post an update") %>
+  <%= text_field_tag(:content) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<h2>Posts</h2>
+<% @posts.each do |post| %>
+  <p><%= post.content %></p>
+<% end %>
