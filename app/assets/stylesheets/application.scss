@@ -1,5 +1,17 @@
-@import url(//fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
+
+.nav_bar {background-color: turquoise;}
 
 body {
-  font-family: 'Gloria Hallelujah', Helvetica, Arial;
+  background-color: pink;
+  font-family: 'Vollkorn', serif;
+}
+
+h1 {
+  color: darkblue;
+}
+
+p {
+  color: black;
 }
