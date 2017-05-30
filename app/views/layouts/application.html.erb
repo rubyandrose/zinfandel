@@ -9,15 +9,13 @@
 </head>
 <body>
 
-<div class="nav_bar">
+
 <% if signed_in? %>
-  <%= link_to "Sign out", destroy_user_session_path %>
+  <div class="nav_bar">
+    <%= link_to "Sign out", destroy_user_session_path %>
+    <%= link_to "Home", root_path%>
+  </div>
 <% end %>
-
-  <%= link_to "Home", root_path%>
-
-
-</div>
 
 <%= yield %>
 
