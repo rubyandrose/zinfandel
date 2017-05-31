@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   resources :posts
 
   root to: "hello#index"
-  resource :post
 end
