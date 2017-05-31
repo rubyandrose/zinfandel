@@ -3,9 +3,9 @@
 
 <h2>Posts</h2>
 <% @posts.each do |post| %>
-  <div>
-    <%= post.user.full_name %>
-    <%= image_tag(post.user.picture_url) %>
-    <%= post.content %>
+  <div class="postmaster3000">
+    <p> <%= post.user.full_name %> </p>
+    <%= image_tag(post.user.picture_url, class: "profile_pic") %>
+    <p> <%= post.content %> </p>
   </div>
 <% end %>
