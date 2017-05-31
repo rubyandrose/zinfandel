@@ -1,0 +1,5 @@
+<h1>All the posts</h1>
+
+<% @posts.each do |post| %>
+  <div style="border: 1px solid red;"><%= post.content %> - <%= post.user.full_name %> - <img src="<%= post.user.picture_url %>"></div>
+<% end %>
