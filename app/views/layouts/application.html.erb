@@ -9,11 +9,12 @@
 </head>
 <body>
 
-
 <% if signed_in? %>
   <div class="nav_bar">
     <%= link_to "Sign out", destroy_user_session_path %>
     <%= link_to "Home", root_path%>
+  <%= link_to "Posts", posts_path %>
+  <%= link_to "New Post", new_post_path %>
   </div>
 <% end %>
 
