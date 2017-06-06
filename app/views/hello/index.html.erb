@@ -4,8 +4,8 @@
 <h2>Posts</h2>
 <% @posts.each do |post| %>
   <div class="postmaster3000">
-    <p> <%= post.user.full_name %> </p>
-    <%= image_tag(post.user.picture_url, class: "profile_pic") %>
+    <p> <a href="<%= user_path post.user %>"><%= post.user.full_name %></a></p>
+    <a href="<%= user_path post.user %>"><%= image_tag(post.user.picture_url, class: "profile_pic") %></a>
     <p> <%= post.content %> </p>
   </div>
 <% end %>
