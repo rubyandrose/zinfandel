@@ -1,0 +1,21 @@
+<div class="postmaster3000">
+  <p><%= link_to post.user.full_name, user_path(post.user) %></p>
+  <a href="<%= user_path post.user %>"><%= image_tag(post.user.picture_url, class: "profile_pic") %></a>
+  <p><%= post.content %></p>
+
+  <% if post.giphy.present? && post.giphy_gif.image_url.present? %>
+    <p><%= image_tag(post.giphy_gif.image_url) %></p>
+  <% end %>
+
+  <div style="border: 1px solid red;">
+    This makes me
+    <% all_feels.each do |feel| %>
+      <%= link_to feel, post_reactions_path(post, feels: feel), method: :post %>
+    <% end %>
+  </div>
+  <% post.reactions.each do |reaction| %>
+    <div style="border: 1px solid red;">
+      <%= reaction.user.full_name %> felt <%= reaction.feels %>
+    </div>
+  <% end %>
+</div>
