@@ -12,5 +12,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @feels = Reaction::ACCEPTABLE_FEELS
   end
 end
