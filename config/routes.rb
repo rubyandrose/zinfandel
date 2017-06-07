@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   
   resources :posts
 
+  resources :search 
+
   root to: "hello#index"
 end
