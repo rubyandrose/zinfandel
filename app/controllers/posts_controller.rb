@@ -4,14 +4,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.build(params.require(:post).permit(:content))
+    @post = current_user.posts.build(params.require(:post).permit(:content, :giphy))
     @post.save!
 
     redirect_to posts_path
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
     @feels = Reaction::ACCEPTABLE_FEELS
   end
 end
