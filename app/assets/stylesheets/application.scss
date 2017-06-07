@@ -33,6 +33,33 @@ p {
     margin-bottom: 20px;
 }
 
+.user_name {
+    font-size: 40px;
+    color: black;
+}
+
+.profile_box {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
 .profile_pic {
   width: 100%;
 }
+
+.user_post {
+    border: 1px solid white;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.post_content {
+  font-size: 20px;
+}
+
+.post_time {
+  font-family: 'Vollkorn';
+  color: #999;
+}
+
