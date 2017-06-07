@@ -14,6 +14,8 @@ gem 'omniauth-google-oauth2'
 gem 'paperclip'
 gem 'puma'
 gem 'simple_form'
+gem 'her'
+gem 'faraday_middleware'
 
 group :development, :test do
   gem 'sqlite3'
