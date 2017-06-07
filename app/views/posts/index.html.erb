@@ -1,5 +1,13 @@
 <h1>All the posts</h1>
 
 <% @posts.each do |post| %>
-  <div style="border: 1px solid red;"><%= post.content %> - <%= post.user.full_name %> - <img src="<%= post.user.picture_url %>"></div>
+  <div style="border: 1px solid red;"><%= post.content %> - <%= link_to post.user.full_name, user_path(post.user) %> - <a href="<%= user_path post.user %>"><img src="<%= post.user.picture_url %>"></a></div>
+  <div style="border: 1px solid red;">This makes me <% @feels.each do |feel| %><%= link_to feel, post_reactions_path(post, feels: feel), method: :post %> <% end %></div>
+  <% post.reactions.each do |reaction| %>
+  	<div style="border: 1px solid red;">
+  		<%= reaction.user.full_name %> felt <%= reaction.feels %>
+  	</div>
+  <% end %>
 <% end %>
+
+

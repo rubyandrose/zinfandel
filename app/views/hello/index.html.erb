@@ -1,11 +1,15 @@
 <h1>Hello, <%= @user_name %></h1>
 <img src="<%= @picture %>">
 
-<h2>Posts</h2>
-<% @posts.each do |post| %>
+<h2>Recent Posts</h2>
+<% @recent_posts.each do |post| %>
   <div class="postmaster3000">
-    <p> <%= post.user.full_name %> </p>
-    <%= image_tag(post.user.picture_url, class: "profile_pic") %>
+    <p><%= link_to post.user.full_name, user_path(post.user) %></p>
+    <a href="<%= user_path post.user %>"><%= image_tag(post.user.picture_url, class: "profile_pic") %></a>
     <p> <%= post.content %> </p>
+
+    <% if post.giphy.present? && post.giphy_gif.image_url.present? %>
+        <p><%= image_tag(post.giphy_gif.image_url) %></p>
+    <% end %>
   </div>
 <% end %>

@@ -1,7 +1,16 @@
 <h1>Wineaholics be checkin' out your profile ;)</h1>
-
-<div>
-  <img src="<%= @user.picture_url %>">
+<div class="profile_box">
+  <p class="user_name"><%= @user.full_name %></p>
+  <div>
+    <img src="<%= @user.picture_url %>">
+  </div>
+  <p><%= @user.email %></p>
 </div>
-<p>Name: <%= @user.full_name %></p>
-<p>Email: <%= @user.email %></p>
+
+<h2>Posts</h2>
+<% @posts.each do |post| %>
+  <div class="user_post">
+    <p class="post_content"> <%= post.content %> </p>
+    <p class="post_time"> <%= post.created_at.to_formatted_s(:long) %> </p>
+  </div>
+<% end %>
