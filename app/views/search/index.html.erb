@@ -1,0 +1,10 @@
+<h1>Alcoholics</h1>
+
+<% @users.each do |user| %>
+  <div style="border: 1px solid black;">
+  <a href="/users/<%= user.id %>">
+    <img src ="<%=user.picture_url%>">
+    <%= user.full_name %>
+  </a>
+  </div>
+<% end %>
