@@ -23,6 +23,9 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'dotenv-rails'
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'selenium-webdriver'
 end
 
 group :production do
