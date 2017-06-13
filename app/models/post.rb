@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_many :reactions
+  has_many :comments
 
   def giphy_iframe_url
     "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=#{giphy}&fmt=html"
