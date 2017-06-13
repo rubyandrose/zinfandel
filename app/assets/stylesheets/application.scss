@@ -63,3 +63,11 @@ p {
   color: #999;
 }
 
+.like_container {
+  display: flex;
+  margin-bottom: 15px;
+
+  span { 
+    margin-left: 10px;
+  }
+}

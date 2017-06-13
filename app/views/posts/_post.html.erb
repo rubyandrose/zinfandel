@@ -2,6 +2,10 @@
   <p><%= link_to post.user.full_name, user_path(post.user) %></p>
   <a href="<%= user_path post.user %>"><%= image_tag(post.user.picture_url, class: "profile_pic") %></a>
   <p><%= post.content %></p>
+  <div class="like_container">
+    <%= link_to "Like", post_likes_path(post), method: :post %>
+    <span><%= post.likes.count %></span>
+  </div>
 
   <% if post.giphy.present? && post.giphy_gif.image_url.present? %>
     <p><%= image_tag(post.giphy_gif.image_url) %></p>
