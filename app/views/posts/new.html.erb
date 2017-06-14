@@ -6,3 +6,30 @@
 
   <%= f.submit 'Post!' %>
 <% end %>
+
+<script>
+  var all_users = [];
+  <% User.all.each do |u| %>
+    all_users.push({ 'full_name': '<%= j u.full_name %>', 'picture_url': '<%= j u.picture_url %>' });
+  <% end %>
+
+  $('.post_content input').on('input', function(e) {
+    var content = $(this).val().toLowerCase();
+    if (content.includes('zega') || content.includes('sam')) {
+      $('.new_post input[type=submit]').addClass('animated rollOut');
+    } else {
+
+      for (var i = 0; i < all_users.length; i++) {
+        var user = all_users[i];
+        var name_parts = user.full_name.toLowerCase().split(' ');
+
+        for (var j = 0; j < name_parts.length; j++) {
+          if (content.includes(name_parts[j])) {
+            $('body').append('<img src="' + user.picture_url + '" class="animated rollOut" style="position: absolute;">');
+            break;
+          }
+        }
+      }
+    }
+  });
+</script>

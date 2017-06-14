@@ -7,12 +7,16 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show, :edit, :update]
-
+  
+  resource :slack
+  
   resources :posts do
   	  resources :reactions
+      resources :likes
   end
 
-  resources :search
-
+  resources :comments
+  resources :search 
+  
   root to: "hello#index"
 end

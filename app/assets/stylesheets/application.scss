@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee+Outline|Righteous|Vollkorn');
 
-
 .nav_bar {
   background-color: turquoise;
 }
@@ -63,3 +62,11 @@ p {
   color: #999;
 }
 
+.like_container {
+  display: flex;
+  margin-bottom: 15px;
+
+  span { 
+    margin-left: 10px;
+  }
+}
