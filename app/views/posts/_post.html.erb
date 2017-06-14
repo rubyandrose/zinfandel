@@ -1,12 +1,12 @@
 <div class="postmaster3000">
   <p><%= link_to post.user.full_name, user_path(post.user) %></p>
-  <a href="<%= user_path post.user %>"><%= image_tag(post.user.picture_url, class: "profile_pic") %></a>
+  <a href="<%= user_path post.user %>"><%= image_tag(post.user.picture_url, class: "profile_pic animated jello") %></a>
   <p><%= post.content %></p>
 
   <% if post.giphy.present? && post.giphy_gif.image_url.present? %>
     <p><%= image_tag(post.giphy_gif.image_url) %></p>
   <% end %>
-
+  <%= link_to "New Comment", new_comment_path(post_id:post.id) %>
   <div style="border: 1px solid red;">
     This makes me
     <% all_feels.each do |feel| %>
@@ -15,7 +15,12 @@
   </div>
   <% post.reactions.each do |reaction| %>
     <div style="border: 1px solid red;">
-      <%= reaction.user.full_name %> felt <%= reaction.feels %>
+      <%= link_to reaction.user.full_name, user_path(reaction.user) %> felt <%= reaction.feels %>
     </div>
   <% end %>
+<div style="border: 1px solid purple;">
+   <% post.comments.each do |comment| %>
+      <%= link_to comment.user.full_name, user_path(comment.user) %> sez <%= comment.comment_body %>
+   <% end %>
+  </div> 
 </div>
