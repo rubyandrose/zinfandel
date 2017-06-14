@@ -1,0 +1,7 @@
+<h1>State yoself foo!</h1>
+
+<%= form_tag(user_path(current_user), method: "patch") do %>
+  <%= label_tag(:new_bio, "Update bio:") %>
+  <%= text_area_tag(:new_bio, @user.bio, size: "30x30") %>
+  <%= submit_tag("Update") %>
+<% end %>

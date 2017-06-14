@@ -4,7 +4,13 @@
   <div>
     <img src="<%= @user.picture_url %>">
   </div>
+  <h3>Bio:</h3>
+  <p style = "white-space:PRE"><%= @user.bio %></p>
+  <h3>Email:</h3>
   <p><%= @user.email %></p>
+  <% if @user == current_user %>
+    <%= link_to 'Edit Profile', edit_user_path(current_user) %>
+  <% end %>
 </div>
 
 <h2>Posts</h2>
