@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       resources :likes
   end
 
+  resources :comments
   resources :search 
-
   root to: "hello#index"
 end
