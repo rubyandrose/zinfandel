@@ -3,7 +3,7 @@
   <a href="<%= user_path post.user %>"><%= image_tag(post.user.picture_url, class: "profile_pic") %></a>
   <p><%= post.content %></p>
   <div class="like_container">
-    <%= link_to "Like", post_likes_path(post), method: :post %>
+    <%= link_to render(:partial => 'shared/like'), post_likes_path(post), method: :post %>
     <span><%= post.likes.count %></span>
   </div>
 
