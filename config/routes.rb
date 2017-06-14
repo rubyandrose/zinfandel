@@ -8,9 +8,13 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   
+  resource :slack
+  
   resources :posts do
   	  resources :reactions
   end
+
+  resources :search 
 
   root to: "hello#index"
 end
