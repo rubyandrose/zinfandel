@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   	  resources :reactions
   end
 
+  resources :comments
+
   root to: "hello#index"
 end

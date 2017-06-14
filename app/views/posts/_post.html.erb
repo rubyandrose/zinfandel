@@ -6,7 +6,7 @@
   <% if post.giphy.present? && post.giphy_gif.image_url.present? %>
     <p><%= image_tag(post.giphy_gif.image_url) %></p>
   <% end %>
-
+  <%= link_to "New Comment", new_comment_path(post_id:post.id) %>
   <div style="border: 1px solid red;">
     This makes me
     <% all_feels.each do |feel| %>
