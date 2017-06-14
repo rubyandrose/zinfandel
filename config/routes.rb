@@ -6,13 +6,13 @@ Rails.application.routes.draw do
     get 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
 
-  resources :users, only: [:show]
-  
+  resources :users, only: [:show, :edit, :update]
+
   resources :posts do
   	  resources :reactions
   end
 
-  resources :search 
+  resources :search
 
   root to: "hello#index"
 end
