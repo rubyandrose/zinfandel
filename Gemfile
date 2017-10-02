@@ -17,10 +17,15 @@ gem 'simple_form'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'byebug'
+  gem 'pry-rails'
   gem 'spring'
   gem 'rspec-rails'
   gem 'dotenv-rails'
+end
+
+group :development do
+   gem 'better_errors'
+   gem 'binding_of_caller'
 end
 
 group :production do
