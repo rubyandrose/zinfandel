@@ -1,2 +1,7 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
+
+<% @posts.each do |post| %>
+  <h2><%= post.user.full_name %> said: </h2>
+  <p><%= post.content %></p>
+<% end %>
