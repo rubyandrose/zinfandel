@@ -1,7 +1,16 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
 
-<% @posts.each do |post| %>
-  <h2><%= post.user.full_name %> said: </h2>
-  <p><%= post.content %></p>
-<% end %>
+
+<table class="centered">
+  <% @posts.each do |post| %>
+    <tr>
+      <td class="left-align">
+        <p><strong><%= post.user.full_name %></strong> said: <%= post.content %></p>
+      </td>
+      <td>
+      <%= link_to "View",post %>
+      </td>
+    </tr>
+  <% end %>
+</table>
