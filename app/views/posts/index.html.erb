@@ -8,6 +8,10 @@
       <td class="left-align">
         <p><strong><%= post.user.full_name %></strong> said: <%= post.content %></p>
       </td>
+      <td><%= post.likes.count%></td>
+        <td>
+        <%= button_to "Like", {action: "create",controller:"likes",params:{post_id: post.id}} %>  
+        </td>
       <td>
       <%= link_to "View",post %>
       </td>

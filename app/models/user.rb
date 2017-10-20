@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :trackable, :omniauthable, omniauth_providers: [:google_oauth2]
 
   has_many :posts
+  has_many :likes
 
   validates :picture_url, format: { with: /.*\.(jpg|png)/i, message: 'must end in an image format' }
 

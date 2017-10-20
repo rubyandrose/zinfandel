@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   root to: "hello#index"
+  resources :likes
 
   resources :posts
 end
