@@ -1,0 +1,20 @@
+.PostList {
+  margin: 0 auto;
+	width: 40%;
+  text-align: left;
+}
+
+.PostItem {
+  padding: 1em;
+  margin-bottom: 1em;
+  &--pink {
+  	background-color: #FFF0F0;
+  }
+  &-social {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  span {
+    margin: 0 5px 0 5px;
+  }
+}
