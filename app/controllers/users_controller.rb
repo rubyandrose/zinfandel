@@ -9,9 +9,8 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-
-    if @user.update
-      redirect_to post_path(@user)
+    if @user.update(params.require(:user).permit(:star_sign))
+      redirect_to user_path(@user)
     else
       render :edit
     end
