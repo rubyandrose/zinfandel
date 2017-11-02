@@ -9,10 +9,13 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    if @user.update(params.require(:user).permit(:star_sign))
+    if @user.update(user_params)
       redirect_to user_path(@user)
     else
       render :edit
     end
+  end
+  def user_params
+    params.require(:user).permit(:bio,:star_sign)
   end
 end

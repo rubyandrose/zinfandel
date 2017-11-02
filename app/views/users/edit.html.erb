@@ -1,5 +1,7 @@
-<h1>Edit User</h1>
-<%= simple_form_for @user do |f| %>
+<h1>Edit bio</h1>
+<%= simple_form_for @user, method: :put do |f| %>
+<%= f.input :bio %>
 <%= f.input :star_sign, collection: User::STAR_SIGNS %>
 <%= f.submit %>
 <% end %>
+
