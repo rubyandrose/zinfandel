@@ -1,0 +1,12 @@
+<h1>Today's Horoscope</h1>
+<p>
+	<%= @user.full_name %>
+</p>
+
+<p>
+	<%= @user.star_sign %>
+</p>
+
+<p>
+	<%= @user.daily_horoscope if @user.star_sign.present? %>
+</p>

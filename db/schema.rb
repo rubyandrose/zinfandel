@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20171102225828) do
     t.datetime "updated_at"
     t.string "picture_url"
     t.string "full_name"
+    t.text "star_sign"
     t.string "bio"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
